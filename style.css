@@ -9,18 +9,22 @@
   left: 0;
   right: 0;
   z-index: 20;
+  --ticker-duration: 70s;
 }
 
 .ticker-track {
-  display: inline-block;
-  animation: scroll 20s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll var(--ticker-duration) linear infinite;
 }
 
-.ticker-track span {
-  margin-right: 3rem;
+.ticker-message {
+  flex: 0 0 100vw;
+  text-align: center;
+  padding: 0.4rem 1rem;
 }
 
-@keyframes scroll {
+@keyframes ticker-scroll {
   from {
     transform: translateX(0);
   }
@@ -36,7 +40,7 @@
 
 /* base */
 body {
-  margin: 0;
+  margin: 10;
   font-family: "Serif", monospace;
   color: #617670;
   padding-top: 2.2rem;
@@ -48,9 +52,9 @@ body::before {
   content: "";
   position: fixed;
   inset: -10%;
-  background: url("assets/pattern.png") center / 600px repeat;
+  background: url("assets/pattern.png") center / 400px repeat;
   background-position: 0 0;
-  transform: rotate(6deg);
+  transform: rotate(0deg);
   transform-origin: center;
   opacity: 0.65;
   pointer-events: none;
@@ -63,7 +67,7 @@ body::before {
     background-position: 0 0;
   }
   to {
-    background-position: 0 400px;
+    background-position: 100 800px;
   }
 }
 
@@ -77,11 +81,12 @@ body::before {
   flex-direction: column;
   gap: 0.4rem;
   padding: 0.6rem 0.7rem;
-  border: 2px solid #303030;
+  border: 2px solid #aaa;
   background: #e6dfd2;
   backdrop-filter: blur(2px);
   font-size: 14px;
   z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .floating-nav a {
@@ -158,6 +163,7 @@ pre.ascii {
   border-top: 1px solid #333;
   padding-top: 1.5rem;
   margin-top: 1.5rem;
+  scroll-margin-top: 4rem;
 }
 
 h2 {
@@ -175,9 +181,10 @@ h2 {
 /* gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-rows: 120px;
-  gap: 0.75rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: 10px;
+  gap: 1.2rem;
+  grid-auto-flow: dense;
 }
 
 .tile {
@@ -190,7 +197,27 @@ h2 {
   text-decoration: none;
   color: #617670;
   transform: translateY(var(--offset));
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.tile.landscape {
+  grid-column: span 3;
+}
+
+.tile.portrait {
+  grid-column: span 2;
+}
+
+.tile.square {
+  grid-column: span 2;
+}
+
+.tile.featured {
+  grid-column: 1 / span 4;
+  grid-row-start: 1;
+  --offset: 0px;
 }
 
 .tile img {
@@ -199,14 +226,20 @@ h2 {
   object-fit: cover;
   display: block;
   filter: grayscale(0.15) contrast(1.05);
-  transition: transform 300ms ease, filter 300ms ease;
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
 }
 
 .tile::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.65));
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0.65)
+  );
   opacity: 0;
   transition: opacity 200ms ease;
 }
@@ -222,7 +255,9 @@ h2 {
   color: #bbb;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity 200ms ease, transform 200ms ease;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
   z-index: 1;
 }
 
@@ -256,19 +291,6 @@ h2 {
 
 .tile:nth-child(3n) {
   --offset: -4px;
-}
-
-.tile.wide {
-  grid-column: span 2;
-}
-
-.tile.tall {
-  grid-row: span 2;
-}
-
-.tile.big {
-  grid-column: span 2;
-  grid-row: span 2;
 }
 
 /* lightbox */
@@ -367,6 +389,93 @@ h3 {
   font-size: 12px;
 }
 
+/* github */
+.github-intro {
+  margin: 0 0 1rem;
+  font-size: 13px;
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.repo-card {
+  border: 1px solid #333;
+  padding: 1rem;
+  background: rgba(230, 223, 210, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.repo-thumb {
+  border: 1px solid #333;
+  background: #1f1f1f;
+  height: 160px;
+  overflow: hidden;
+}
+
+.repo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.1) contrast(1.05);
+}
+
+.repo-card p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.repo-link {
+  align-self: flex-start;
+  border: 1px solid #333;
+  padding: 0.3rem 0.6rem;
+  text-decoration: none;
+  color: #617670;
+  background: rgba(230, 223, 210, 0.6);
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+  background: rgba(230, 223, 210, 0.8);
+}
+
+/* bandcamp */
+.bandcamp-intro {
+  margin: 0 0 1rem;
+  font-size: 13px;
+}
+
+.bandcamp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.bandcamp-embed {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #333;
+  background: #111;
+}
+
+.bandcamp-embed.tall {
+  height: 472px;
+}
+
+.bandcamp-placeholder {
+  border: 1px dashed #333;
+  padding: 1rem;
+  font-size: 13px;
+  text-align: center;
+  color: #617670;
+  background: rgba(230, 223, 210, 0.35);
+}
+
 /* footer */
 .footer {
   text-align: center;
@@ -377,6 +486,25 @@ h3 {
 }
 
 /* mobile */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tile.featured {
+    grid-column: 1 / span 4;
+  }
+
+  .tile.landscape {
+    grid-column: span 3;
+  }
+
+  .tile.portrait,
+  .tile.square {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 600px) {
   .floating-nav {
     position: static;
@@ -386,16 +514,38 @@ h3 {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
   }
 
-  .tile,
-  .tile.wide,
-  .tile.tall,
-  .tile.big {
+  .tile.featured,
+  .tile.landscape,
+  .tile.portrait,
+  .tile.square {
     grid-column: span 1;
-    grid-row: span 1;
+    grid-row-start: auto;
+  }
+
+  .tile.featured {
+    order: -1;
+  }
+
+  .tile {
+    transform: none;
+  }
+
+  .tile img {
+    height: auto;
+  }
+
+  .tile::after,
+  .tile-label {
+    opacity: 1;
+  }
+
+  .tile-label {
+    transform: translateY(0);
   }
 
   .lightbox-panel {
@@ -408,6 +558,10 @@ h3 {
   }
 
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .github-grid {
     grid-template-columns: 1fr;
   }
 

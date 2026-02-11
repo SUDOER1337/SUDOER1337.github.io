@@ -1,28 +1,36 @@
-
-
-
- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Nullfjord.</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Nullfjord.</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- top tagline -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span class="ticker-message"
+          >someday anything cool will be written here.</span
+        >
+      </div>
+    </div>
 
-  <!-- top tagline -->
-<div class="ticker">
-  <div class="ticker-track">
-    <span>someday anything cool will be written here.</span>
-  </div>
-</div>
+    <!-- floating nav -->
+    <nav class="floating-nav" aria-label="Section navigation">
+      <a href="#top">Top</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#interest">Interest</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#github">GitHub</a>
+      <a href="#bandcamp">Bandcamp</a>
+    </nav>
 
-  <!-- main frame -->
-  <main class="frame">
-
-    <!-- ascii logo -->
-    <section class="ascii-section">
-<pre class="ascii">
+    <!-- main frame -->
+    <main class="frame" id="top">
+      <!-- ascii logo -->
+      <section class="ascii-section">
+        <pre class="ascii">
  /*
  *
  *                                                                              
@@ -37,243 +45,492 @@
  *                                             QO MP                            
  *                                             `bmP                     
  */
+</pre
+        >
+      </section>
 
-</pre>
-    </section>
+      <!-- links -->
+      <p class="links-intro">Here where you can find me online</p>
+      <section class="links">
+        <a href="https://discord.com/invite/QX2X2GxBqg"
+          >EXOLIATH FOUNDATION DISCORD SERVER</a
+        >
+        <span>|</span>
+        <a href="https://github.com/SUDOER1337">GITHUB</a>
+        <span>|</span>
+        <a href="https://www.youtube.com/@nullfjord">YOUTUBE</a>
+      </section>
 
-    <!-- links -->
-     <p class="links-intro">Here where you can find me online</p>
-    <section class="links">
-      <a href="#">DISCORD SERVER</a>
-      <span>|</span>
-      <a href="https://github.com/SUDOER1337">GITHUB</a>
-      <span>|</span>
-      <a href="https://www.youtube.com/@nullfjord">YOUTUBE</a>
-    </section>
+      <!-- about -->
+      <section class="block" id="about">
+        <h2>About</h2>
+        <p>
+          Some weird duck with too much interest who go by name "Nullfjord" I'm
+          a 16-year-old passionate self-taught programmer gamedev artist & music
+          composer from Thailand. I sketch/draw/program/design & tune totally
+          almost random stuff just someone who have alot of unfinished Godot
+          games , a traditional or digital art , tracker or DAW music , Theming
+          Ricing Linux & apps and much more don't expect me to be good at them
+          👍
+        </p>
+      </section>
 
-    <!-- about -->
-    <section class="block">
-      <h2>About</h2>
-      <p>
-        Some weird duck with too much interest who go by name "Nullfjord"
-        I'm a 16-year-old passionate self-taught programmer gamedev artist & music composer from Thailand. 
-        I sketch/draw/program/design & tune totally almost random stuff
+      <!-- skills -->
+      <section class="block" id="skills">
+        <h2>Skills</h2>
 
-        just someone who have alot of unfinished Godot games , a traditional or digital art , tracker or DAW music , Theming Ricing Linux & apps and much more don't expect me to be good at them 👍
-      </p>
-    </section>
+        <div class="grid">
+          <div class="panel">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span>C</span>
+              <span>C#</span>
+              <span>Python</span>
+              <span>GDScript</span>
+            </div>
+          </div>
 
-    <!-- skills -->
-    <section class="block">
-      <h2>Skills</h2>
-
-      <div class="grid">
-        <div class="panel">
-          <h3>Languages</h3>
-          <div class="tags">
-            <span>C</span>
-            <span>C#</span>
-            <span>Python</span>
-            <span>GDScript</span>
+          <div class="panel">
+            <h3>Tools</h3>
+            <div class="tags">
+              <span>dwm</span>
+              <span>Godot</span>
+              <span>Blender</span>
+              <span>Linux</span>
+              <span>Ibis Paint X</span>
+              <span>Krita</span>
+              <span>Git</span>
+              <span>Renoise</span>
+              <span>REAPER</span>
+              <span>LMMS</span>
+              <span>Ardour</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="panel">
-          <h3>Tools</h3>
-          <div class="tags">
-            <span>dwm</span>
-            <span>Godot</span>
-            <span>Blender</span>
-            <span>Linux</span>
-            <span>Ibis Paint X</span>
-            <span>Krita</span>
-            <span>Git</span>
-            <span>Renoise</span>
-            <span>REAPER</span>
-            <span>LMMS</span>
-            <span>Ardour</span>
+      <!-- skills -->
+      <section class="block" id="interest">
+        <h2>Interest</h2>
+        <div class="grid">
+          <div class="panel">
+            <h3>Musics</h3>
+            <p>
+              I'm inspired by someone and band , a simple list that is directly
+              my influence to my taste in music creation would be is Igorrr ,
+              Jamie Paige & Aphex Twin (Honorable mention: Diabarha , Nihil Fist
+              Venetains Snares Alec Empire & Atari Teenage Riot and C418)
+            </p>
+            <div class="tags">
+              <span>Trackers Music</span>
+              <span>Electronics</span>
+              <span>Classic</span>
+              <span>Ambient</span>
+              <span>Noises</span>
+              <span>Jungle</span>
+              <span>Flashcore</span>
+              <span>Breakcore</span>
+              <span>Cybergrind</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Arts</h3>
+            From Traditional arts drawn with pencil to Digital painting or even
+            a image edittings and 3D arts
+            <div class="tags">
+              <span>Liminal Spaces</span>
+              <span>Concept Arts</span>
+              <span>Dreamcores</span>
+              <span>Character Designs</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-        <!-- skills -->
-    <section class="block">
-      <h2>Interest</h2>
-      <div class="grid">
-        <div class="panel">
-          <h3>Musics</h3>
-          <p>I'm inspired by someone and band , 
-            a simple list that is directly my 
-            influence to my taste in music creation would be is Igorrr , Jamie Paige & Aphex Twin
-        (Honorable mention: Diabarha , Nihil Fist  Venetains Snares  Alec Empire & Atari Teenage Riot and C418)</p>
-          <div class="tags">
-            <span>Trackers Music</span>
-            <span>Electronics</span>
-            <span>Classic</span>
-            <span>Ambient</span>
-            <span>Noises</span>
-            <span>Jungle</span>
-            <span>Flashcore</span>
-            <span>Breakcore</span>
-            <span>Cybergrind</span>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Arts</h3>
-          From Traditional arts drawn with pencil to Digital painting or even a image edittings and 3D arts
-          <div class="tags">
-            <span>Liminals Spaces</span>
-            <span>Concept Arts</span>
-            <span>Dreamcores</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <!-- gallery -->
-    <section class="block">
+    <section class="block" id="gallery">
       <h2>Work gallery (i only got some selected WIP here)</h2>
       <div class="gallery-grid">
-        <a class="tile big" href="https://github.com/SUDOER1337/cloudwm" title="cloudwm" data-title="cloudwm" data-position="10% 70%">
-          <img src="assets/gallery/cloudwm.png" alt="My Opinionized dwm rice" loading="lazy">
-          <span class="tile-label">cloudwm</span>
-        </a>
-        <a class="tile tall" href="assets/gallery/2.jpg" title="My OC Vilh'lmina" data-title="My OC Vilh'lmina" data-position="-10% 20%">
-          <img src="assets/gallery/2.jpg" alt="My OC Vilh'lmina" loading="lazy" style="object-position: 30% 20%;">
-          <span class="tile-label">My OC Vilh'lmina</span>
-        </a>
-        <a class="tile wide" href="assets/gallery/3.jpg" title="Energy Revolver thing" data-title="Its an sci-fi revolver or smth">
-          <img src="assets/gallery/3.jpg" alt="Weapon" loading="lazy">
-          <span class="tile-label">Energy Revolver thing</span>
-        </a>
-        <a class="tile" href="assets/gallery/4.jpg" title="Tactile noise" data-title="Tactile noise">
-          <img src="assets/gallery/4.jpg" alt="Tactile noise texture" loading="lazy">
-          <span class="tile-label">Tactile noise</span>
-        </a>
-        <a class="tile wide" href="assets/gallery/1.jpg" title="Altar loop" data-title="Altar loop">
-          <img src="assets/gallery/1.jpg" alt="Altar loop concept" loading="lazy">
-          <span class="tile-label">Altar loop</span>
-        </a>
-        <a class="tile" href="assets/gallery/6.jpg" title="Cold bloom" data-title="Cold bloom">
-          <img src="assets/gallery/6.jpg" alt="Cold bloom still" loading="lazy">
-          <span class="tile-label">Cold bloom</span>
-        </a>
-        <a class="tile" href="assets/gallery/7.jpg" title="Grain study" data-title="Grain study">
-          <img src="assets/gallery/7.jpg" alt="Grain study still" loading="lazy">
-          <span class="tile-label">Grain study</span>
-        </a> 
-        <a class="tile" href="assets/gallery/7.jpg" title="Grain study" data-title="Grain study">
-          <img src="assets/gallery/7.jpg" alt="Grain study still" loading="lazy">
-          <span class="tile-label">Grain study</span>
-        </a>
-        <a class="tile" href="https://github.com/SUDOER1337/cloudwm" title="Grain study" data-title="Grain study">
-          <img src="assets/gallery/1.jpg" alt="Grain study still" loading="lazy">
-          <span class="tile-label">cloudwm</span>
-        </a>
+          <a
+            class="tile"
+            href="assets/gallery/2.jpg"
+            title="My OC Vilh'lmina"
+            data-title="My OC Vilh'lmina"
+            data-position="-10% 20%"
+          >
+            <img
+              src="assets/gallery/2.jpg"
+              alt="My OC Vilh'lmina"
+              loading="lazy"
+              style="object-position: 30% 20%"
+            />
+            <span class="tile-label">My OC Vilh'lmina</span>
+          </a>
+          <a
+            class="tile"
+            href="assets/gallery/3.jpg"
+            title="Energy Revolver thing"
+            data-title="Its an sci-fi revolver or smth"
+          >
+            <img src="assets/gallery/3.jpg" alt="Weapon" loading="lazy" />
+            <span class="tile-label">Energy Revolver thing</span>
+          </a>
+          <a
+            class="tile"
+            href="assets/gallery/4.jpg"
+            title="Nailgun"
+            data-title="Nailgun"
+          >
+            <img src="assets/gallery/4.jpg" alt="Nailgun" loading="lazy" />
+            <span class="tile-label">Nailgun</span>
+          </a>
+          <a
+            class="tile"
+            href="assets/gallery/6.jpg"
+            title="Energy Cannon"
+            data-title="Energy Cannon"
+          >
+            <img
+              src="assets/gallery/6.jpg"
+              alt="Energy Cannon"
+              loading="lazy"
+            />
+            <span class="tile-label">Energy Cannon</span>
+          </a>
+          <a
+            class="tile"
+            href="assets/gallery/1.jpg"
+            title="snail"
+            data-title="snail"
+          >
+            <img
+              src="assets/gallery/1.jpg"
+              alt="they are indeed snails!!! :)"
+              loading="lazy"
+            />
+            <span class="tile-label">nail</span>
+          </a>
       </div>
     </section>
 
+    <!-- github -->
+    <section class="block github" id="github">
+      <h2>GitHub stuff</h2>
+      <p class="github-intro">Pinned repos, experiments, and tools.</p>
+      <div class="github-grid">
+        <article class="repo-card">
+          <div class="repo-thumb">
+            <img
+              src="assets/gallery/cloudwm.png"
+              alt="cloudwm desktop rice screenshot"
+              loading="lazy"
+            />
+          </div>
+          <h3>cloudwm</h3>
+          <p>Opinionated dwm rice and configs.</p>
+          <div class="tags">
+            <span>Linux</span>
+            <span>dwm</span>
+            <span>rice</span>
+          </div>
+          <a class="repo-link" href="https://github.com/SUDOER1337/cloudwm">View repo</a>
+        </article>
+        <article class="repo-card">
+          <h3>Example project</h3>
+          <p>Short description of what this repo is about.</p>
+          <div class="tags">
+            <span>Godot</span>
+            <span>game</span>
+          </div>
+          <a class="repo-link" href="https://github.com/SUDOER1337">View repo</a>
+        </article>
+      </div>
+    </section>
 
-    <!-- footer -->
-    <footer class="footer">
-      <p>© Nullfjord</p>
+    <!-- bandcamp -->
+    <section class="block bandcamp" id="bandcamp">
+      <h2>Bandcamp uploads</h2>
+        <p class="bandcamp-intro">Latest works and sketches.</p>
+        <div class="bandcamp-grid">
+          <div class="bandcamp-placeholder">
+            <iframe
+              style="border: 0; width: 350px; height: 350px"
+              src="https://bandcamp.com/EmbeddedPlayer/track=4005976549/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+              seamless
+              ><a
+                href="https://nullfjord.bandcamp.com/track/kinesin-on-its-way-to-deliver-endorphins-to-my-brain"
+                >Kinesin On Its Way To Deliver Endorphins To My Brain by
+                Nullfjord</a
+              ></iframe
+              >
+            <iframe
+              style="border: 0; width: 350px; height: 350px"
+              src="https://bandcamp.com/EmbeddedPlayer/track=2548407705/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+              seamless
+              ><a
+                href="https://nullfjord.bandcamp.com/track/i-just-figured-out-that-sampler-is-cool"
+                >I Just Figured Out That Sampler is Cool by Nullfjord</a
+              ></iframe
+            >
+          </div>
+        </div>
+      </section>
 
-      <p>thank to patorjk's ASCII Art Generator (I used the Georgia11 Style)</p>
-    </footer>
+      <!-- footer -->
+      <footer class="footer">
+        <p>© Nullfjord</p>
 
-  </main>
+        <p>
+          thank to patorjk's ASCII Art Generator (I used the Georgia11 Style)
+        </p>
+      </footer>
+    </main>
 
-  <!-- lightbox -->
-  <div class="lightbox" aria-hidden="true">
-    <div class="lightbox-backdrop" data-close></div>
-    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
-      <figure class="lightbox-figure">
-        <img id="lightbox-image" src="" alt="">
-        <figcaption class="lightbox-meta">
-          <h3 id="lightbox-title">Title</h3>
-          <p id="lightbox-caption"></p>
-          <a id="lightbox-link" class="lightbox-link" href="#" target="_blank" rel="noopener">Open link</a>
-        </figcaption>
-      </figure>
+    <!-- lightbox -->
+    <div class="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-close></div>
+      <div
+        class="lightbox-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image preview"
+      >
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="" alt="" />
+          <figcaption class="lightbox-meta">
+            <h3 id="lightbox-title">Title</h3>
+            <p id="lightbox-caption"></p>
+            <a
+              id="lightbox-link"
+              class="lightbox-link"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              >Go to website</a
+            >
+          </figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
 
-  <script>
-    (() => {
-      const lightbox = document.querySelector(".lightbox");
-      if (!lightbox) return;
+    <script>
+      (() => {
+        const tickerMessages = [
+          "someday anything cool will be written here.",
+          "...and something ever happens",
+          "yes, i know what i wanna hear",
+          "how did you ended up here? anyways enjoy your stay",
+          "art dumps whenever.",
+        ];
+        const tickerTrack = document.querySelector(".ticker-track");
 
-      const image = document.getElementById("lightbox-image");
-      const title = document.getElementById("lightbox-title");
-      const caption = document.getElementById("lightbox-caption");
-      const link = document.getElementById("lightbox-link");
-      const tiles = document.querySelectorAll(".gallery-grid .tile");
+        if (tickerTrack && tickerMessages.length > 0) {
+          const shuffled = [...tickerMessages];
+          for (let i = shuffled.length - 1; i > 0; i -= 1) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+          }
 
-      const isImageUrl = (value) => {
-        if (!value) return false;
-        const clean = value.split("?")[0].split("#")[0].toLowerCase();
-        return [".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif", ".svg"].some((ext) => clean.endsWith(ext));
-      };
-
-      const openLightbox = (tile) => {
-        const img = tile.querySelector("img");
-        const href = tile.getAttribute("href") || "";
-        const full =
-          tile.dataset.full ||
-          (isImageUrl(href) ? href : "") ||
-          img?.src ||
-          "";
-        const label = tile.dataset.title || tile.title || tile.querySelector(".tile-label")?.textContent || "";
-        const text = tile.dataset.caption || "";
-        const position = tile.dataset.position || "50% 50%";
-        const linkHref = tile.dataset.link || (href && !isImageUrl(href) ? href : "");
-
-        image.src = full;
-        image.alt = img?.alt || label;
-        title.textContent = label;
-        image.style.objectPosition = position;
-        caption.textContent = text;
-        caption.style.display = text ? "block" : "none";
-
-        if (linkHref && linkHref !== "#") {
-          link.href = linkHref;
-          link.style.display = "inline-block";
-        } else {
-          link.style.display = "none";
+          const sequence = shuffled.concat(shuffled);
+          tickerTrack.replaceChildren(
+            ...sequence.map((message) => {
+              const span = document.createElement("span");
+              span.className = "ticker-message";
+              span.textContent = message;
+              return span;
+            }),
+          );
         }
 
-        lightbox.classList.add("is-open");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.classList.add("no-scroll");
-      };
+        const lightbox = document.querySelector(".lightbox");
+        if (!lightbox) return;
 
-      const closeLightbox = () => {
-        lightbox.classList.remove("is-open");
-        lightbox.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("no-scroll");
-      };
+        const image = document.getElementById("lightbox-image");
+        const title = document.getElementById("lightbox-title");
+        const caption = document.getElementById("lightbox-caption");
+        const link = document.getElementById("lightbox-link");
+        const tiles = document.querySelectorAll(".gallery-grid .tile");
+        const gallery = document.querySelector(".gallery-grid");
 
-      tiles.forEach((tile) => {
-        tile.addEventListener("click", (event) => {
-          event.preventDefault();
-          openLightbox(tile);
+        const isImageUrl = (value) => {
+          if (!value) return false;
+          const clean = value.split("?")[0].split("#")[0].toLowerCase();
+          return [
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".gif",
+            ".webp",
+            ".avif",
+            ".svg",
+          ].some((ext) => clean.endsWith(ext));
+        };
+
+        const openLightbox = (tile) => {
+          const img = tile.querySelector("img");
+          const href = tile.getAttribute("href") || "";
+          const full =
+            tile.dataset.full ||
+            (isImageUrl(href) ? href : "") ||
+            img?.src ||
+            "";
+          const label =
+            tile.dataset.title ||
+            tile.title ||
+            tile.querySelector(".tile-label")?.textContent ||
+            "";
+          const text = tile.dataset.caption || "";
+          const position = tile.dataset.position || "50% 50%";
+          const linkHref =
+            tile.dataset.link || (href && !isImageUrl(href) ? href : "");
+
+          image.src = full;
+          image.alt = img?.alt || label;
+          title.textContent = label;
+          image.style.objectPosition = position;
+          caption.textContent = text;
+          caption.style.display = text ? "block" : "none";
+
+          if (linkHref && linkHref !== "#") {
+            link.href = linkHref;
+            link.style.display = "inline-block";
+          } else {
+            link.style.display = "none";
+          }
+
+          lightbox.classList.add("is-open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("no-scroll");
+        };
+
+        const closeLightbox = () => {
+          lightbox.classList.remove("is-open");
+          lightbox.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("no-scroll");
+        };
+
+        tiles.forEach((tile) => {
+          tile.addEventListener("click", (event) => {
+            event.preventDefault();
+            openLightbox(tile);
+          });
         });
-      });
 
-      lightbox.addEventListener("click", (event) => {
-        if (event.target.matches("[data-close]")) {
-          closeLightbox();
-        }
-      });
+        if (gallery) {
+          let layoutQueued = false;
 
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-          closeLightbox();
+          const scheduleLayout = () => {
+            if (layoutQueued) return;
+            layoutQueued = true;
+            window.requestAnimationFrame(() => {
+              layoutQueued = false;
+              applyLayout();
+            });
+          };
+
+          const applyLayout = () => {
+            const items = [];
+
+            tiles.forEach((tile) => {
+              const img = tile.querySelector("img");
+              if (!img) return;
+              const width = img.naturalWidth || img.width;
+              const height = img.naturalHeight || img.height;
+              if (!width || !height) return;
+
+              items.push({
+                tile,
+                width,
+                height,
+                ratio: width / height,
+                area: width * height,
+              });
+            });
+
+            if (!items.length) return;
+
+            tiles.forEach((tile) => {
+              tile.classList.remove(
+                "landscape",
+                "portrait",
+                "square",
+                "featured",
+              );
+            });
+
+            let featured = items[0];
+            items.forEach((item) => {
+              if (item.area > featured.area) {
+                featured = item;
+              }
+            });
+
+            items.forEach((item) => {
+              if (item.ratio >= 1.25) {
+                item.tile.classList.add("landscape");
+              } else if (item.ratio <= 0.85) {
+                item.tile.classList.add("portrait");
+              } else {
+                item.tile.classList.add("square");
+              }
+            });
+
+            featured.tile.classList.add("featured");
+
+            const styles = window.getComputedStyle(gallery);
+            const rowHeight = parseFloat(
+              styles.getPropertyValue("grid-auto-rows"),
+            );
+            const rowGap = parseFloat(styles.getPropertyValue("gap"));
+            const isMobile = window.matchMedia("(max-width: 600px)").matches;
+            const minHeight = isMobile ? 200 : 140;
+            const maxHeight = isMobile ? 600 : 420;
+
+            items.forEach((item) => {
+              const itemWidth = item.tile.getBoundingClientRect().width;
+              if (!itemWidth) return;
+              const targetHeight = itemWidth * (item.height / item.width);
+              const clampedHeight = Math.min(
+                Math.max(targetHeight, minHeight),
+                maxHeight,
+              );
+              const rowSpan = Math.ceil(
+                (clampedHeight + rowGap) / (rowHeight + rowGap),
+              );
+
+              item.tile.style.gridRowEnd = `span ${rowSpan}`;
+            });
+          };
+
+          tiles.forEach((tile) => {
+            const img = tile.querySelector("img");
+            if (!img) return;
+            if (img.complete) {
+              scheduleLayout();
+            } else {
+              img.addEventListener("load", scheduleLayout, { once: true });
+            }
+          });
+
+          window.addEventListener("resize", scheduleLayout);
         }
-      });
-    })();
-  </script>
-</body>
+
+        lightbox.addEventListener("click", (event) => {
+          if (event.target.matches("[data-close]")) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (
+            event.key === "Escape" &&
+            lightbox.classList.contains("is-open")
+          ) {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
+  </body>
 </html>
