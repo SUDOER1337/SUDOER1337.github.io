@@ -51,15 +51,15 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: -10%;
+  inset: -30%;
   background: url("assets/pattern.png") center / 400px repeat;
   background-position: 0 0;
-  transform: rotate(0deg);
+  transform: rotate(30deg) scale(1.15);
   transform-origin: center;
   opacity: 0.65;
   pointer-events: none;
   z-index: 0;
-  animation: pattern-slide 60s linear infinite;
+  animation: pattern-slide 180s linear infinite;
 }
 
 @keyframes pattern-slide {
@@ -67,7 +67,7 @@ body::before {
     background-position: 0 0;
   }
   to {
-    background-position: 100 800px;
+    background-position: 0 900px;
   }
 }
 
@@ -387,6 +387,89 @@ h3 {
   padding: 0.2rem 0.5rem;
   margin: 0.2rem;
   font-size: 12px;
+}
+
+.influence-intro {
+  margin: 0 0 0.8rem;
+}
+
+.influence-list {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.influence-list li {
+  line-height: 1.35;
+}
+
+.influence-rotator-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.5s ease;
+}
+
+.influence-rotator-list li {
+  border: 1px solid #333;
+  padding: 0.65rem;
+  background: rgba(230, 223, 210, 0.35);
+}
+
+.influence-rotator-list li.is-current,
+.influence-rotator-list li.is-next {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.influence-rotator-list li.is-next {
+  transform: translateY(110%);
+  opacity: 0;
+}
+
+.influence-rotator-list.is-sliding li.is-current {
+  transform: translateY(-110%);
+  opacity: 0;
+}
+
+.influence-rotator-list.is-sliding li.is-next {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.influence-list a {
+  color: #617670;
+}
+
+.influence-note {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.more-influences {
+  margin-bottom: 1rem;
+}
+
+.more-influences summary {
+  cursor: pointer;
+  color: #617670;
+  margin-bottom: 0.75rem;
+}
+
+.more-influences[open] summary {
+  margin-bottom: 0.55rem;
+}
+
+@media (max-width: 700px) {
+  .influence-rotator-list li {
+    padding: 0.6rem;
+  }
 }
 
 /* github */
